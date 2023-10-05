@@ -1,11 +1,10 @@
 import sys
 
-n = int(input())
-matrix = [list(input()) for _ in range(n)]
-visited = [[False] * n for _ in range(n)]
+sys.setrecursionlimit(1000000)
 
-print(matrix)
-print(visited)
+n = int(sys.stdin.readline())
+matrix = [list(sys.stdin.readline().rstrip()) for _ in range(n)]
+visited = [[False] * n for _ in range(n)]
 
 three_cnt, two_cnt = 0, 0
 dx = [-1, 1, 0, 0]
